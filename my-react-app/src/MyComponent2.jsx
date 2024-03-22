@@ -8,35 +8,31 @@ import React, {useState} from 'react';
 
 function MyComponent2() {
 
-    const [count, setCount] = useState(0);
+    const [car, setCar] = useState({year: 2024, 
+                                    make: "Ford", 
+                                    model: "mustang"});
 
-    function increment() {
-
-        // Takes the PENDING state to calculate the NEXT state
-        // React puts your updater function in a queue (waitin in line)
-        // During the next render, it will call them in the same order
-
-        setCount(prevCount => prevCount + 1);
-        setCount(prevCount => prevCount + 1);
-        setCount(prevCount => prevCount + 1);
+    function handleYearChange(event){
+        setCar(c => ({...c, year: event.target.value}));
     }
 
-    function decrement() {
-        setCount(prevCount => prevCount - 1);
-        setCount(prevCount => prevCount - 1);
-        setCount(prevCount => prevCount - 1);
+    function handleMakeChange(event){
+        setCar(c => ({...c, make: event.target.value}));
     }
 
-    function reset() {
-        setCount(prevCount => 0);
-    }
+    function handleModelChange(event){
+        setCar(c => ({...c, model: event.target.value}));
 
+    }
+    
     return (
         <div>
-            <h2>Count: {count}</h2>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={reset}>Reset</button>
-            <button onClick={increment}>Increment</button>
+            <p>Your favorite car is: {car.year} {car.make} {car.model}</p>
+            <input type="number" value={car.year} onChange={handleYearChange} /><br />
+            <input type="text" value={car.make} onChange={handleMakeChange}/><br />
+            <input type="text" value={car.model} onChange={handleModelChange}/><br />
+            
+
         </div>
     )
 }
