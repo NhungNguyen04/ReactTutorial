@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
-import List from './List';
 
 function ToDoList() {
 
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
 
-    function handleInputChange(event) {
+    useEffect(() => {
+        document.title = `Count: ${count}`;
+    });
 
+    function handleInputChange(event) {
         setNewTask(event.target.value);
     }
 
