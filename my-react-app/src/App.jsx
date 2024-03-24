@@ -21,16 +21,16 @@
   //             but you don't want that information to trigger new renders.
 
   //             1. Accessing/Interacting with DOM elements
-  //             2. Handling Focus, Aimations and Transitions
+  //             2. Handling Focus, Animations and Transitions
   //             3. Managing Timers and Intervals
 
-import MyComponent5 from "./MyComponent5.jsx";
+import StopWatch from "./StopWatch.jsx";
 
 function App() {
   
   return (
     <>
-    <MyComponent5/>
+    <StopWatch/>
     </>
   );
 }
