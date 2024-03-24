@@ -1,10 +1,10 @@
-import MyComponent4 from './MyComponent4.jsx';
+import DigitalClock from './DigitalClock.jsx';
 
 function App() {
   
   return (
     <>
-    <MyComponent4/>
+    <DigitalClock/>
     </>
   );
   
