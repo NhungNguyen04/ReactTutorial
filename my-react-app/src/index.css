@@ -240,7 +240,7 @@ li {
   margin-left: 10px;
 } */
 
-body {
+/* body {
   background-image: url('./images/backgroundimg.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -265,4 +265,9 @@ body {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.75);
+} */
+
+.box {
+  border: 3px solid;
+  padding: 25px;
 }
